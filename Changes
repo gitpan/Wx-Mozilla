@@ -6,3 +6,6 @@ Revision history for Perl extension Wx::Mozilla.
 
 0.04  Sun Mar 12 13:45
 	- Patched up enough to install
+
+0.05  Thu Mar 23 16:59
+        - Added in the event classes

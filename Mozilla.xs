@@ -199,3 +199,160 @@ wxMozillaBrowser::GetTitle()
 #
 #void
 #wxMozillaBrowser::StopSpellChecker()
+
+MODULE = Wx__Mozilla	PACKAGE = Wx::MozillaBeforeLoadEvent
+
+wxString
+wxMozillaBeforeLoadEvent::GetURL()
+
+void
+wxMozillaBeforeLoadEvent::SetURL(newURL)
+  wxString newURL
+
+void
+wxMozillaBeforeLoadEvent::Cancel()
+
+bool
+wxMozillaBeforeLoadEvent::IsCancelled()
+
+#
+# No, there's no new/constructor here, on purpose
+
+wxEvent *
+wxMozillaBeforeLoadEvent::Clone()
+
+
+MODULE = Wx__Mozilla	PACKAGE = Wx::MozillaStateChangedEvent
+
+int
+wxMozillaStateChangedEvent::GetState()
+
+void
+wxMozillaStateChangedEvent::SetState(state)
+  int state
+
+wxString
+wxMozillaStateChangedEvent::GetURL()
+
+void
+wxMozillaStateChangedEvent::SetURL(url)
+  wxString url
+
+wxEvent *
+wxMozillaStateChangedEvent::Clone()
+
+
+MODULE = Wx__Mozilla	PACKAGE = Wx::MozillaSecurityChangedEvent
+
+int
+wxMozillaSecurityChangedEvent::GetSecurity()
+
+void
+wxMozillaSecurityChangedEvent::SetSecurity(security)
+  int security
+
+
+MODULE = Wx__Mozilla	PACKAGE = Wx::MozillaLoadCompleteEvent
+
+wxEvent *
+wxMozillaLoadCompleteEvent::Clone()
+
+MODULE = Wx__Mozilla	PACKAGE = Wx::MozillaStatusChangedEvent
+
+wxString
+wxMozillaStatusChangedEvent::GetStatusText()
+
+bool
+wxMozillaStatusChangedEvent::IsBusy()
+
+void
+wxMozillaStatusChangedEvent::SetStatusText(status)
+  wxString status
+
+void
+wxMozillaStatusChangedEvent::SetBusy(isbusy)
+  bool isbusy
+
+MODULE = Wx__Mozilla	PACKAGE = Wx::MozillaTitleChangedEvent
+
+wxString
+wxMozillaTitleChangedEvent::GetTitle()
+
+void
+wxMozillaTitleChangedEvent::SetTitle(title)
+  wxString title
+
+MODULE = Wx__Mozilla	PACKAGE = Wx::MozillaProgressEvent
+
+int
+wxMozillaProgressEvent::GetSelfCurrentProgress()
+
+void
+wxMozillaProgressEvent::SetSelfCurrentProgress(progress)
+  int progress
+
+int
+wxMozillaProgressEvent::GetSelfMaxProgress()
+
+void
+wxMozillaProgressEvent::SetSelfMaxProgress(progress)
+  int progress
+
+int
+wxMozillaProgressEvent::GetTotalCurrentProgress()
+
+void
+wxMozillaProgressEvent::SetTotalCurrentProgress(progress)
+  int progress
+
+int
+wxMozillaProgressEvent::GetTotalMaxProgress()
+
+void
+wxMozillaProgressEvent::SetTotalMaxProgress(progress)
+  int progress
+
+
+MODULE = Wx__Mozilla	PACKAGE = Wx::MozillaRightClickEvent
+
+bool
+wxMozillaRightClickEvent::IsBusy()
+
+void
+wxMozillaRightClickEvent::SetBusy(isbusy)
+  bool isbusy
+
+wxString
+wxMozillaRightClickEvent::GetBackgroundImageSrc()
+
+void
+wxMozillaRightClickEvent::SetBackgroundImageSrc(src)
+  wxString src
+
+wxString
+wxMozillaRightClickEvent::GetText()
+
+void
+wxMozillaRightClickEvent::SetText(text)
+  wxString text
+
+wxString
+wxMozillaRightClickEvent::GetImageSrc()
+
+void
+wxMozillaRightClickEvent::SetImageSrc(src)
+  wxString src
+
+wxString
+wxMozillaRightClickEvent::GetLink()
+
+void
+wxMozillaRightClickEvent::SetLink(link)
+  wxString link
+
+int
+wxMozillaRightClickEvent::GetContext()
+
+void
+wxMozillaRightClickEvent::SetContext(context)
+  int context
